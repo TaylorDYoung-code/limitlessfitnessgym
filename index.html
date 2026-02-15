@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- add required and recommended <meta> tags -->
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Limitless Fitness"/>
+    <meta name="description" content="Limitless Fitness is a gym that provides personalized training, top-of-the-line equipment,and a supportive community to help you flourish in your fitness journey."/>
+    <meta property="og:title" content="Limitless Fitness: Transform Your Life" />
+    <meta property="og:description" content="Join Limitless Fitness to meet your fitness goals and transform your life."/>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.LimitlessFitnessgym.com" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/TaylorDYoung-code/limitlessfitnessgym/refs/heads/main/images/facility.jpg" />
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="LimitlessFitnessgym.com"/>
+    <meta name="twitter:creator" content="@LimitlessFitness"/>
+    <meta name="twitter:title" content="LimitlessFitness"/>
+    <meta name="twitter:description" content="Join Limitless Fitness to meet your fitness goals and transform your life."/>
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/TaylorDYoung-code/limitlessfitnessgym/refs/heads/main/images/facility.jpg"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="copyright" content="LimitlessFitnessgym.com">
+    <meta name="date" content="2026">
+    <base href="https://www.LimitlessFitnessgym.com/">
+      <link rel="author" href="https://www.LimitlessFitnessgym.com/">
+      <link rel="canonical" href="https://www.LimitlessFitnessgym.com/">
+      <link rel="alternate" href="https://www.LimitlessFitnessgym.com/" hreflang="en">
+      <link rel="alternate" href="https://www.LimitlessFitnessgym.com/" hreflang="fr">
+      <link rel="alternate" href="https://www.LimitlessFitnessgym.com/" hreflang="es">
+      <link rel="license" href="https://www.LimitlessFitnessgym.com/license">
+      <link rel="shortcut icon" href="images\limitlesslogo.png">
+      	    <link rel="stylesheet" href="style.css">
+    		<title>Limitless Fitness</title>
 
 </head>
 <body>
-<!-- add a skip link that skips to the main content -->
-<!-- add correct heading levels -->
+<a class="skip-link" href='#main'>Skip to content</a>
   <header>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round" width="75" height="75" stroke-width="1.5">
       <path d="M2 12h1"></path>
@@ -20,10 +46,12 @@
   <h1>Transform Your Life at Limitless Fitness</h1>
     <p>Unleash your strength, embrace the challenge, and join a community dedicated to your fitness journey.</p>
     <a href="#">Join Now</a>
-<!-- add alt text where necessary -->
-<!-- add responsive images for resolution switching -->
-    
-      src="images/facility.jpg"
+       <img
+          alt="Black and white, facility,gym equipment and scenic view of the city"
+          srcset=" images\facility.jpg,
+              images\facility-320w.jpg 320w,
+              images\facility-768w.jpg 768w">
+
 
   </header>
   <nav>
@@ -61,9 +89,11 @@
         <li>Specialty Workshops: From functional training to mindfulness sessions.</li>
         <li>Check out our [Class Schedule] for times and detailed descriptions.</li>
       </ul>
-<!-- add alt text where necessary -->
-<!-- add responsive images for resolution switching -->
-        src="images/classes.jpg"
+        <img
+          alt="Black and white, people working out in fitness class, gym equipment"
+          srcset=" images\classes.jpg,
+              images\classes-320w.jpg 320w,
+              images\classes-768w.jpg 768w">
 
     </section>
     <section>
@@ -73,9 +103,11 @@
         Ready for a change?
       </p> 
       <a href="#">Book a Free Consultation today!</a>
-<!-- add alt text where necessary -->
-<!-- add responsive images for resolution switching -->
-        src="images/dumbells.jpg"
+      <img
+          alt="Black and white, close up shot of dumbells"
+          srcset=" images\dumbells.jpg,
+              images\dumbells-320w.jpg 320w,
+              images\dumbells-768w.jpg 768w">
 
     </section>
     <section>
@@ -89,17 +121,27 @@
       <section id="membership-form">
         <h2>Join Limitless Fitness Today!</h2>
         <p>Fill out the form below to kickstart your fitness journey:</p>
-<!--add accessibility to the form-->
-        Full Name
-        Email Address
-        Phone Number
-        Membership Type
-          Select a Membership Option
-          Monthly Membership
-          Annual Membership
-          Family & Group Plans
-        Tell us about your fitness goals:
-        Submit
+        <form action= "https://wp.zybooks.com/form-viewer.php" autocomplete="on" method="POST" target="_blank">
+        <label for="name">Full Name:</label>
+        <input id="name" type="text" autocomplete="name" required>
+        <label for="email">Email Address:</label>
+        <input id="email" type="email" autocomplete="email" required>
+        <label for="tel">Phone Number:</label>
+        <input id="tel" type="tel" autocomplete="tel" required>
+
+        <fieldset>
+        <legend>Select a Membership Option:</legend>
+        <input id="monthly" type="radio" name="membership" value="monthly" required>
+        <label for="monthly">Monthly Membership</label><br>
+        <input id="annual" type="radio" name="membership" value="annual" required>
+        <label for="annual">Annual Membership</label><br>
+          <input id="familygroup" type="radio" name="membership" value="familygroup" required>
+        <label for="familygroup">Family & Group Plans</label><br>
+        </fieldset>
+        <label for="message">Tell us about your fitness goals:</label><br>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" name="submit" value="Submit">
+        </form>
       </section>
     </section>
   </main>
